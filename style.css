@@ -8,6 +8,16 @@
 	 background-size: 100% 100%;  */
 /* } */
 
+body, html {
+	font-family: 'Open Sans', sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Old Standard TT', serif !important;
+	font-weight: 700 !important;
+	font-style: italic !important;
+}
+
 .jumbotron {
 	background: url("images/main-image.jpg") no-repeat center center fixed;
 	-webkit-background-size: cover;
@@ -16,3 +26,6 @@
 	-o-background-size: cover;
 	min-height: 100vmin;
   }
+.navbar-brand img {
+	height: 90px; width: 90px;
+}
