@@ -1,21 +1,24 @@
-/* .jumbotron {
-	background-image: url("images/main-image.jpg");
-	background-size: cover;
-	height: 100%;
-	width: 100%;
-	min-height: 100vmin; */
-	 /* min-height: 620px;
-	 background-size: 100% 100%;  */
-/* } */
-
 body, html {
 	font-family: 'Open Sans', sans-serif !important;
+	font-size: 21px !important;
+	line-height: 2 !important;
+	font-weight: 300 !important;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1 {
 	font-family: 'Old Standard TT', serif !important;
 	font-weight: 700 !important;
 	font-style: italic !important;
+}
+
+h2, h3, h4, h5, h6 {
+	font-family: 'Old Standard TT', serif !important;
+	font-weight: 700 !important;
+	font-size: 1em;
+}
+
+a {
+	font-size: 0.90rem;
 }
 
 .jumbotron {
@@ -26,6 +29,34 @@ h1, h2, h3, h4, h5, h6 {
 	-o-background-size: cover;
 	min-height: 100vmin;
   }
+
 .navbar-brand img {
 	height: 90px; width: 90px;
 }
+
+.col {
+	/* background-color: blue; */
+	height: 250px;
+}
+
+html {
+	font-size: 1rem;
+  }
+  
+  @include media-breakpoint-up(sm) {
+	html {
+	  font-size: 1.2rem;
+	}
+  }
+  
+  @include media-breakpoint-up(md) {
+	html {
+	  font-size: 1.4rem;
+	}
+  }
+  
+  @include media-breakpoint-up(lg) {
+	html {
+	  font-size: 1.6rem;
+	}
+  }
