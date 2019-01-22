@@ -12,6 +12,13 @@ Or:
 #F89000
 #FFFFFF
 #000000
+
+Or:
+#FBE8A6 - tan
+#F4976C - light orange
+#303C6C - dark blue
+#B4DFE5 - light blue
+#D2FDFF - lighter blue
  */
 body, html {
 	font-family: 'Open Sans', sans-serif !important;
@@ -20,6 +27,8 @@ body, html {
 	font-weight: 300 !important;
 	color: #000000 !important;
 	width: 100vw;
+	height: 100%;
+
 }
 
 h1 {
@@ -64,6 +73,34 @@ a {
 
 #jumbotron-logo {
 	height: 10rem;
+
+}
+
+#welcome-container {
+	/* height:100% !important; */
+	background: rgb(250, 239, 210);
+	/* background: rgb(250, 239, 197); */
+}
+
+#welcome-video-container {
+	/* background: #D2FDFF; */
+		/* height: auto; */
+
+}
+
+.carousel-inner .carousel-item-right.active,
+.carousel-inner .carousel-item-next {
+  transform: translateX(33.33%);
+}
+
+.carousel-inner .carousel-item-left.active, 
+.carousel-inner .carousel-item-prev {
+  transform: translateX(-33.33%)
+}
+
+.carousel-inner .carousel-item-right,
+.carousel-inner .carousel-item-left{ 
+  transform: translateX(0);
 }
 
 .navbar-brand img {
