@@ -24,9 +24,16 @@ body, html {
 
 h1 {
 	font-family: 'Old Standard TT', serif !important;
+	color: #ffffff !important;
+	font-style: italic !important;
+	font-weight: 700 !important;
+}
+
+h2, h3, h4, h5, h6 {
+	font-family: 'Old Standard TT', serif !important;
 	font-weight: 700 !important;
 	font-style: italic !important;
-	color: #ffffff !important;
+	color: #000000 !important;
 }
 
 blockquote .blockquote,.lead {
@@ -36,11 +43,11 @@ blockquote .blockquote-footer {
 	color: #ffffff !important;
 }
 
-h2, h3, h4, h5, h6 {
-	font-family: 'Old Standard TT', serif !important;
-	font-weight: 700 !important;
-	font-size: 1.25em !important;
-}
+/* h2, h3, h4, h5, h6 { */
+	/* font-family: 'Old Standard TT', serif !important; */
+	/* /* font-weight: 700 !important; */
+	/* font-size: 1.75em !important;  */
+/* } */
 
 a {
 	font-size: 0.90rem;
@@ -63,9 +70,10 @@ a {
 	height: 90px; width: 90px;
 }
 
-.col {
+.col-12 {
 	/* background-color: blue; */
-	height: 250px;
+	/* height: 250px; */
+	/* border: 3px solid green; */
 }
 
 
