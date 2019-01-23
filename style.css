@@ -87,21 +87,20 @@ a {
 		/* height: auto; */
 
 }
-.card-control {
-	/* height: 200px; */
+.card {
+	height: 300px;
+
 }
 
 .navbar-brand img {
 	height: 90px; width: 90px;
 }
-.carousel {
-  }
   
   .carousel-cell {
-	width: 66%;
-	height: 200px;
+	width: 33%;
+	/* height: 1000px; */
 	margin-right: 10px;
-	border-radius: 5px;
+	/* border-radius: 50px; */
   }
   
 
