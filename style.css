@@ -1,4 +1,4 @@
-/*
+/* 
 Possible color schemes:
 #EEB567
 #F5A033
@@ -87,25 +87,24 @@ a {
 		/* height: auto; */
 
 }
-
-.carousel-inner .carousel-item-right.active,
-.carousel-inner .carousel-item-next {
-  transform: translateX(33.33%);
-}
-
-.carousel-inner .carousel-item-left.active, 
-.carousel-inner .carousel-item-prev {
-  transform: translateX(-33.33%)
-}
-
-.carousel-inner .carousel-item-right,
-.carousel-inner .carousel-item-left{ 
-  transform: translateX(0);
+.card-control {
+	/* height: 200px; */
 }
 
 .navbar-brand img {
 	height: 90px; width: 90px;
 }
+.carousel {
+  }
+  
+  .carousel-cell {
+	width: 66%;
+	height: 200px;
+	margin-right: 10px;
+	border-radius: 5px;
+  }
+  
+
 
 .col-12 {
 	/* background-color: blue; */
