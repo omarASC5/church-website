@@ -21,16 +21,7 @@ Or:
 #D2FDFF - lighter blue
  */
 
- * {
-	 margin: 0;
-	 padding: 0;
- }
 
- .img-fluid {
-	display: block;
-	max-width: 100%;
-	height: 100%;
- }
 body, html {
 	font-family: 'Open Sans', sans-serif !important;
 	font-size: 21px !important;
@@ -99,10 +90,41 @@ a {
 
 }
 .card {
-	height: 300px;
+	/* height: 400px;
+	width: 300px; */
 
 }
 
+/* equal card height */
+.row-equal > div[class*='col-'] {
+    display: flex;
+    flex: 1 0 auto;
+}
+
+.row-equal .card {
+   width: 100%;
+}
+
+/* ensure equal card height inside carousel */
+.carousel-inner>.row-equal.active, 
+.carousel-inner>.row-equal.next, 
+.carousel-inner>.row-equal.prev {
+    display: flex;
+}
+
+/* prevent flicker during transition */
+.carousel-inner>.row-equal.active.left, 
+.carousel-inner>.row-equal.active.right {
+    opacity: 0.5;
+    display: flex;
+}
+
+
+/* control image height */
+.card-img-top-250 {
+    max-height: 250px;
+    overflow:hidden;
+}
 .navbar-brand img {
 	height: 90px; width: 90px;
 }
@@ -115,6 +137,7 @@ a {
 	border-radius: 5px;
 	counter-increment: carousel-cell;
   }
+  
   
 
 
