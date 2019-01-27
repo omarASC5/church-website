@@ -108,13 +108,17 @@ a {
 /* ensure equal card height inside carousel */
 .carousel-inner>.row-equal.active, 
 .carousel-inner>.row-equal.next, 
-.carousel-inner>.row-equal.prev {
+.carousel-inner>.row-equal.prev,
+.carousel-inner>.carousel-item-left,
+.carousel-inner>.carousel-item-right {
     display: flex;
 }
 
 /* prevent flicker during transition */
 .carousel-inner>.row-equal.active.left, 
-.carousel-inner>.row-equal.active.right {
+.carousel-inner>.row-equal.active.right,
+.carousel-inner>.carousel-item-left,
+.carousel-inner>.carousel-item-right {
     opacity: 0.5;
     display: flex;
 }
@@ -129,14 +133,7 @@ a {
 	height: 90px; width: 90px;
 }
   
-.carousel-cell {
-	width: 66%;
-	height: 200px;
-	margin-right: 10px;
-	background: #8C8;
-	border-radius: 5px;
-	counter-increment: carousel-cell;
-  }
+
   
   
 
