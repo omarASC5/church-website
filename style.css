@@ -47,11 +47,15 @@ h2, h3, h4, h5, h6 {
 	color: #000000 !important;
 }
 
-blockquote .blockquote,.lead {
+blockquote .corinthians-quote,.lead {
 	color: #ffffff !important;
 }
 blockquote .blockquote-footer {
 	color: #ffffff !important;
+}
+
+blockquote .saludo-quotes {
+	color: #000000 !important;
 }
 
 /* h2, h3, h4, h5, h6 { */
@@ -98,8 +102,9 @@ a {
 /* equal card height */
 .row-equal > div[class*='col-'] {
     display: flex;
-    flex: 1 0 auto;
+	flex: 1 1 auto;
 }
+
 
 .row-equal .card {
    width: 100%;
@@ -111,7 +116,8 @@ a {
 .carousel-inner>.row-equal.prev,
 .carousel-inner>.carousel-item-left,
 .carousel-inner>.carousel-item-right {
-    display: flex;
+	display: flex;
+	justify-content: center;
 }
 
 /* prevent flicker during transition */
