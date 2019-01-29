@@ -84,6 +84,17 @@ a {
 	min-height: 100vmin;
   }
 
+  #church-services-container {
+	background: url("images/zac-durant-302752-unsplash.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	-o-background-size: cover;
+	min-height: 100vmin;
+	opacity: 0.75;
+  	filter: alpha(opacity=75); /* For IE8 and earlier */
+  }
+
 #jumbotron-logo {
 	height: 10rem;
 
