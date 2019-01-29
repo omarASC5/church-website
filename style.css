@@ -76,24 +76,19 @@ a {
 }
 
 .jumbotron {
-	background: url("images/main-image.jpg") no-repeat center center fixed;
-	-webkit-background-size: cover;
+	background: url("images/family-1466261_1920.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover;	
 	-moz-background-size: cover;
 	background-size: cover;
 	-o-background-size: cover;
+	background-position: top;
 	min-height: 100vmin;
   }
 
-  #church-services-container {
-	background: url("images/zac-durant-302752-unsplash.jpg") no-repeat center center fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	background-size: cover;
-	-o-background-size: cover;
-	min-height: 100vmin;
-	opacity: 0.75;
-  	filter: alpha(opacity=75); /* For IE8 and earlier */
-  }
+
+ main {
+	background: rgb(248, 249, 250);
+ }
 
 #jumbotron-logo {
 	height: 10rem;
@@ -111,6 +106,27 @@ a {
 		/* height: auto; */
 
 }
+
+#church-services-container {
+	
+}
+
+#visit-container {
+	/* background: #99CCCC; */
+}
+
+#services-and-visit-container {
+	
+}
+main {
+	background: rgb(230,230,230);
+
+ }
+
+#events-and-testimonials-container {
+	background: rgb(250, 239, 210);
+}
+
 .card {
 	/* height: 400px;
 	width: 300px; */
@@ -172,7 +188,7 @@ a {
 }
 
 #footer-bottom {
-	background: #F89000;
+	background: rgb(249, 207, 91);
 }
  
  
