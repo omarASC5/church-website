@@ -87,7 +87,7 @@ a {
 
 
  main {
-	background: rgb(248, 249, 250);
+	/* background: rgb(248, 249, 250); */
  }
 
 #jumbotron-logo {
@@ -97,7 +97,7 @@ a {
 
 #welcome-container {
 	/* height:100% !important; */
-	background: rgb(250, 239, 210);
+	/* background: rgb(250, 239, 210); */
 	/* background: rgb(250, 239, 197); */
 }
 
@@ -120,14 +120,19 @@ a {
 }
 main {
 	/* background: rgb(230,230,230); - or this */
-	background: #ADA996;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(to bottom, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to bottom, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-	
+	background: rgb(247,160,12);
+	background: -moz-linear-gradient(180deg, rgba(247,160,12,1) 0%, rgba(241,240,240,1) 50%, rgba(235,241,110,1) 100%);
+	background: -webkit-linear-gradient(180deg, rgba(247,160,12,1) 0%, rgba(241,240,240,1) 50%, rgba(235,241,110,1) 100%);
+	background: linear-gradient(180deg, rgba(247,160,12,1) 0%, rgba(241,240,240,1) 50%, rgba(235,241,110,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f7a00c",endColorstr="#ebf16e",GradientType=1);
+ }
+
+ #main-and-footer-container {
+	 
  }
 
 #events-and-testimonials-container {
-	background: rgb(250, 239, 210);
+	/* background: rgb(250, 239, 210); */
 }
 
 .card {
@@ -191,7 +196,5 @@ main {
 }
 
 #footer-bottom {
-	background: rgb(252, 213, 105);
-}
- 
- 
+	/* background: #f4ec17; */
+} 

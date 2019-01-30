@@ -14,7 +14,7 @@
 <body>
     
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light mx-xl-4">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand py-0 mr-0" href="#"><img src="images/church_logo_cropped.gif"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -46,7 +46,7 @@
           </nav>
     </header>
 
-    <main class="mx-xl-4">
+    <main>
         <article class="jumbotron pb-4 mb-0">
             <div class="container">
               <h1 id="main-header"class="display-3 text-center">Sanando Los Heridos</h1>
@@ -100,33 +100,32 @@
             </div>
           </div>
         </div>
-        
 
 
               <!-- Source: https://www.codeply.com/go/UbnAF1xhlI/bootstrap-4-carousel-card-slider -->
               <!-- Source: https://www.youtube.com/watch?v=mglq2tBjRxk -->
               <div id="services-and-visit-container">
 
-                  <article  id="church-services-container" class="container-fluid mb-0 px-0 mx-0">
-                      <h3 class="text-center py-4">Church Services</h3>
-    
+                  <article  id="church-services-container" class="container">
+                      <h3 class="text-center pb-2">Church Services</h3>
+                      
                       <section class="carousel slide carousel-fade" data-interval="5000" data-ride="carousel" id="postsCarousel">
                           
-                          <div class="pt-0 mt-2 carousel-inner d-flex flex-nowrap justify-content-between">
-                              <div class="row row-equal carousel-item active mt-0">
+                          <div class="pt-0 mt-2 carousel-inner">
+                              <div class="row row-equal carousel-item active">
                                   <div class="col-md-4">
-                                      <div class="card">
-                                          <div class="card-img-top card-img-top-250">
-                                              <img class="img-fluid" src="http://i.imgur.com/EW5FgJM.png" alt="Carousel 1">
-                                          </div>
-                                          <div class="card-block pt-2 ">
-                                              <h6 class="text-wide pb-1">Insight</h6>
-                                              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                              <h2>
-                                                  <a href>Why Stuff Happens Every Year.</a>
-                                              </h2>
-                                          </div>
-                                      </div>
+                                        <div class="card">
+                                                <div class="card-img-top card-img-top-250">
+                                                    <img class="img-fluid" src="http://i.imgur.com/EW5FgJM.png" alt="Carousel 1">
+                                                </div>
+                                                <div class="card-block pt-2 px-2">
+                                                    <h6 class="text-wide pb-1">Insight</h6>
+                                                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                                    <h2>
+                                                        <a href>Why Stuff Happens Every Year.</a>
+                                                    </h2>
+                                                </div>
+                                            </div>
                                   </div>
                                   <div class="col-md-4">
                                       <div class="card">
@@ -225,7 +224,9 @@
               <div id="events-and-testimonials-container">
                   <article>
                       <h5 class="lead text-center mb-4">Latest Events</h5>
-                      <div class="row">
+                      <div class="container-fluid">
+                          <div class="row">
+
                               <div class="col-4">
                                 <div class="list-group" id="list-tab" role="tablist">
                                   <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Event Title</a>
@@ -298,6 +299,7 @@
                                 </div>
                               </div>
                             </div>
+                          </div>
                   </article>
                   <article class="container-fluid mb-0">
                     <h5 class="my-4 text-center">Un saludo de los hermanos</h5>
@@ -326,7 +328,7 @@
     </main>
     <!-- Footer -->
 <!-- Footer -->
-<footer id="footer-bottom" class="mx-xl-4 page-footer font-small mdb-color pt-4">
+<footer id="footer-bottom" class="page-footer font-small mdb-color pt-4">
 
         <!-- Footer Links -->
         <div class="container text-center text-md-left">
