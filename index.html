@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Sanando Heridas</title>
+    <title>Sanando Los Heridas</title>
     
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
@@ -14,7 +14,7 @@
 <body>
     
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand py-0 mr-0" href="#"><img src="images/church_logo_cropped.gif"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -49,7 +49,8 @@
     <main>
         <article class="jumbotron pb-4 mb-0">
             <div class="container">
-              <h1 id="main-header"class="display-3 text-center">Sanando Los Heridos</h1>
+              <h1 class="display-4 text-center main-header">Hermanos Unidos En Cristo</h1>
+              <h2 class="display-5 text-center main-header">Sanando Los Heridos</h2>
               <blockquote class="blockquote lead">
                 <p style="color:#FFFFFF;">
                   "and the base things of the world and the things which are despised God has chosen, and the things which are not, to bring to nothing the things that are..."
@@ -109,7 +110,7 @@
                   <article  id="church-services-container" class="container">
                       <h3 class="text-center pb-2">Church Services</h3>
                       
-                      <section class="carousel slide carousel-fade" data-interval="5000" data-ride="carousel" id="postsCarousel">
+                      <section class="carousel slide" data-interval="5000" data-ride="carousel" id="postsCarousel">
                           
                           <div class="pt-0 mt-2 carousel-inner">
                               <div class="row row-equal carousel-item active">
@@ -507,7 +508,8 @@
       // This can be used after switching to EJS, templating engine
     console.log(KEYS.GOOGLE_MAP.API_KEY);
     </script>
-
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD0THcs_k7D2JJBYvYYhCzm--hM1N9FoBc&callback=initMap"
+    async defer></script>
     <script src="main.js"></script>
 </body>
 </html>

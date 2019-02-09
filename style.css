@@ -33,11 +33,16 @@ body, html {
 
 }
 
-#main-header {
+#main-navbar {
+	background: #F86E00;
+}
+
+.main-header {
 	font-family: 'Old Standard TT', serif !important;
 	color: #ffffff !important;
 	font-style: italic !important;
 	font-weight: 700 !important;
+	font-size: 3.5em !important;
 }
 
 h1 {
