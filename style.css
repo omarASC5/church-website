@@ -98,7 +98,28 @@ a {
 
   }
 
-.jumbotron {
+#about-btn {
+	font-size: 14px;
+	color: var(--main-font-color, #ffffff);
+	letter-spacing: 1px;
+	line-height: 15px;
+	border: 2px solid var(--main-font-color, #ffffff);
+	border-radius: 40px;
+	background: transparent;
+	text-transform: uppercase;
+	transition: all 0.3s ease 0s;
+}
+
+#visit-btn {
+	font-size: 14px;
+	color: var(--main-font-color, #ffffff);
+	letter-spacing: 1px;
+	line-height: 15px;
+	border: 2px solid var(--secondary-font-color, #FFBC6B);
+	border-radius: 40px;
+	background: var(--secondary-font-color, #FFBC6B);;
+	text-transform: uppercase;
+	transition: all 0.3s ease 0s;
 }
 
 
@@ -106,10 +127,7 @@ a {
 	/* background: rgb(248, 249, 250); */
  }
 
-#jumbotron-logo {
-	height: 10rem;
 
-}
 
 #welcome-container {
 	/* height:100% !important; */
@@ -198,8 +216,8 @@ main {
     overflow:hidden;
 }
 .navbar-brand img {
-	height: 70px; 
-	width: 70px;
+	height: 80px; 
+	width: 80px;
 }
   
 #map {
