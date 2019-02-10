@@ -122,17 +122,27 @@ a {
 	transition: all 0.3s ease 0s;
 }
 
-
+p {
+	color: var(--main-font-color, #ffffff);
+}
  main {
 	/* background: rgb(248, 249, 250); */
  }
 
-
+ .square {
+	display: inline-block;
+	height: 80px;
+	position: absolute;
+	width: 80px;
+	bottom: -190px;	
+	background-color: transparent;
+	border: 3px solid var(--secondary-font-color, #FFBC6B);
+  }
 
 #welcome-container {
-	/* height:100% !important; */
-	/* background: rgb(250, 239, 210); */
-	/* background: rgb(250, 239, 197); */
+	background: #2A263D;
+	padding-top: 5rem;
+	padding-bottom: 7rem;
 }
 
 #welcome-video-container {
