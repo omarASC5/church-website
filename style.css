@@ -30,7 +30,7 @@ body, html {
 	font-family: 'Playfair Display', serif;
 	color: var(--main-font-color, #ffffff);
 	/* font-style: italic !important; */
-	font-size: 90px !important;
+	font-size: 83px !important;
 	/* font-weight: 100; */
 }
 
@@ -129,12 +129,22 @@ p {
 	/* background: rgb(248, 249, 250); */
  }
 
- .square {
+ .square-welcome {
 	display: inline-block;
 	height: 80px;
 	position: absolute;
 	width: 80px;
 	bottom: -190px;	
+	background-color: transparent;
+	border: 3px solid var(--secondary-font-color, #FFBC6B);
+  }
+
+ .square-explore {
+	display: inline-block;
+	height: 80px;
+	position: absolute;
+	width: 80px;
+	bottom: -1360px;	
 	background-color: transparent;
 	border: 3px solid var(--secondary-font-color, #FFBC6B);
   }
@@ -145,11 +155,16 @@ p {
 	padding-bottom: 7rem;
 }
 
-#welcome-video-container {
-	/* background: #D2FDFF; */
-		/* height: auto; */
-
+#explore-container {
+	padding-top: 4rem;
+	padding-bottom: 3rem;
 }
+
+#explore-container h3,#explore-container p {
+	color: #000000 !important;
+}
+
+
 
 #church-services-container {
 	
@@ -162,14 +177,7 @@ p {
 #services-and-visit-container {
 	
 }
-main {
-	/* background: rgb(230,230,230); - or this */
-	background: rgb(247,160,12);
-	background: -moz-linear-gradient(180deg, rgba(247,160,12,1) 0%, rgba(241,240,240,1) 50%, rgba(235,241,110,1) 100%);
-	background: -webkit-linear-gradient(180deg, rgba(247,160,12,1) 0%, rgba(241,240,240,1) 50%, rgba(235,241,110,1) 100%);
-	background: linear-gradient(180deg, rgba(247,160,12,1) 0%, rgba(241,240,240,1) 50%, rgba(235,241,110,1) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f7a00c",endColorstr="#ebf16e",GradientType=1);
- }
+
 
  #main-and-footer-container {
 	 
@@ -238,6 +246,16 @@ main {
 .infoWindow-heading-font {
 	font-size: 1.4rem;
 	font-style: normal !important;
+}
+
+.explore-cards img {
+	height: 250px;
+	width: 100%;
+}
+
+#explore-container .row > div.col-sm-6 {
+	padding-left: 0 !important;
+	padding-right: 0;
 }
 
 #footer-bottom {
