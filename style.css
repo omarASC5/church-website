@@ -319,6 +319,25 @@ p {
 	font-size: 0.83rem !important;
 }
 
+.list-footer-title {
+	color: var(--main-font-color, #ffffff) !important;
+}
+
+.list-footer {
+	list-style-type: none;
+}
+
+
+
+.list-footer a {
+	color: rgba(255, 255, 255, 0.5);
+}
+.list-footer a:hover {
+	color: var(--main-font-color, #ffffff) !important;
+}
+
+
+
 .explore-cards img {
 	height: 250px;
 	width: 100%;
