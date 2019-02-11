@@ -315,9 +315,8 @@ p {
 	width: 100%;
 }
   
-.infoWindow-heading-font {
-	font-size: 1.4rem;
-	font-style: normal !important;
+.infoWindow-style {
+	font-size: 0.83rem !important;
 }
 
 .explore-cards img {
@@ -332,4 +331,7 @@ p {
 
 #footer-bottom {
 	background: #2A263D;
+} 
+#footer-bottom p {
+	color: var(--main-font-color, #ffffff) !important;
 } 

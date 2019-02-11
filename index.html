@@ -108,6 +108,7 @@
 
                     <div class="row">
                             <ul class="caption-style-2">
+                                <a href="#">
                                     <li class="col-sm-6 col-lg-3 explore-cards text-center">
                                         <img src="images/009s.png" class="img-fluid" alt="">
                                         <div class="caption">
@@ -118,6 +119,8 @@
                                             </div>
                                         </div>
                                     </li>
+                                </a>
+                                <a href="#">
                                     <li class="col-sm-6 col-lg-3 explore-cards text-center">
                                         <img src="images/baby-children-cute-264109.jpg" alt="">
                                         <div class="caption">
@@ -128,6 +131,8 @@
                                             </div>
                                         </div>
                                     </li>
+                                </a>
+                                <a href="#">
                                     <li class="col-sm-6 col-lg-3 explore-cards text-center">
                                         <img src="images/family-1466261_1920.jpg" alt="">
                                         <div class="caption">
@@ -138,6 +143,8 @@
                                             </div>
                                         </div>
                                     </li>
+                                </a>
+                                <a href="#">
                                     <li class="col-sm-6 col-lg-3 explore-cards text-center">
                                         <img src="images/fl-09ef748a-ee78-4ec7-beca-b4f413525ba4_2500x2500_1.jpg" alt="">
                                         <div class="caption">
@@ -148,6 +155,8 @@
                                             </div>
                                         </div>
                                     </li>
+                                </a>
+                                <a href="#">
                                     <li class="col-sm-6 col-lg-3 explore-cards text-center">
                                         <img src="images/fl-652154fc-7f7d-4e14-82d8-dad91f76548f_2500x2500_1.jpg" alt="">
                                         <div class="caption">
@@ -158,6 +167,8 @@
                                             </div>
                                         </div>
                                     </li>
+                                </a>
+                                <a href="#">
                                     <li class="col-sm-6 col-lg-3 explore-cards text-center">
                                         <img src="images/fl-33016f29-fca2-4187-aa87-58bcffa443d1_2500x2500_1.jpg" alt="">
                                         <div class="caption">
@@ -168,6 +179,8 @@
                                             </div>
                                         </div>
                                     </li>
+                                </a>
+                                <a href="#">
                                     <li class="col-sm-6 col-lg-3 explore-cards text-center">
                                         <img src="images/josh-sorenson-637599-unsplash.jpg" alt="">
                                         <div class="caption">
@@ -178,6 +191,8 @@
                                             </div>
                                         </div>
                                     </li>
+                                </a>
+                                <a href="#">
                                     <li class="col-sm-6 col-lg-3 explore-cards text-center">
                                         <img src="images/sammie-vasquez-582770-unsplash.jpg" alt="">
                                         <div class="caption">
@@ -188,8 +203,8 @@
                                             </div>
                                         </div>
                                     </li>
-                                </ul>
-                       
+                                </a>
+                            </ul>
                     </div>
 
                             
@@ -212,13 +227,10 @@
                     <a href="https://www.google.com/maps/dir//1938+Daly+Ave,+Bronx,+NY+10460/@40.8413878,-73.9539587,12z/data=!3m1!4b1!4m9!4m8!1m0!1m5!1m1!1s0x89c2f48b6f42e6d1:0xfb54855297c00d05!2m2!1d-73.8839184!2d40.8412791!3e0" target="_blank" class="btn btn-light btn-lg mx-1" id="visit-btn">Get Directions</a>
             </div>
         </div>
-        
-        <div class="container-fluid">
             <div id="map"></div>
-        </div>
 
 <div class="container-fluid" id="footer-bottom">
-    
+    <p>iew</p>
 </div>
               
                   <article class="container-fluid mb-0">
@@ -275,10 +287,8 @@
           position: churchLocation,
           map: map
         });
-        const content = "<h1 class='infoWindow-heading-font'>Iglesia Hermanos Unidos En Cristo</h1><h2 class='infoWindow-heading-font'>Sanando Los Heridos</h2><p class='lead'><strong>Address:</strong> <br>1938 Daly Avenue<br>Bronx, NY 10460</p>"+
-        "<div class='text-center'><img class='img-fluid' src='images/church_photo.png'</div>" + 
-        "<p class='lead text-left py-2'><strong>Contacts:</strong><br>+845-649-9639<br>+845-649-2801</p>" + 
-        "<p class='lead text-left'><strong>Cuando:</strong><br>Domingo: 4:00pm<br>Martes: 7:30pm<br>Jueves: 7:30pm</p>"
+        const content = "<p class='lead infoWindow-style'><strong>Address:</strong> <br>1938 Daly Avenue<br>Bronx, NY 10460</p>" + 
+        "<p class='lead text-left infoWindow-style'><strong>Cuando:</strong><br>Domingo: 4:00pm<br>Martes: 7:30pm<br>Jueves: 7:30pm</p>"
         // Info Window when clicked on marker
         const infoWindow = new google.maps.InfoWindow({
           content: content
