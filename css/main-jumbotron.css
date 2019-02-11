@@ -1,0 +1,65 @@
+:root {
+	--white-color: #ffffff;
+	--yellow-color: #FFBC6B;
+	--black-color: #000000;
+	--purple-color: #2A263D;
+	--dark-purple-color: #201C2F;
+	--default-font-size: 24px;
+}
+
+.main-header {
+	color: var(--white-color, #ffffff);
+	font-size: 83px !important;
+}
+
+.main-header span {
+	color: var(--yellow-color, #FFBC6B);
+}
+
+blockquote .corinthians-quote {
+	color: var(--white-color, #ffffff);
+	font-size: 18px;
+}
+
+blockquote span {
+	font-size: 18px;
+}
+
+.tinted-image {
+	background: 
+		linear-gradient(
+		rgba(42, 38, 61, 0.70), 
+		rgba(42, 38, 61, 0.70)
+		),
+	url("../images/clouds-cloudy-conifers-247478.jpg");
+	-webkit-background-size: cover;	
+	-moz-background-size: cover;
+	background-size: cover;
+	-o-background-size: cover;
+	background-position: top;
+	min-height: 100vmin;
+}
+
+#about-btn {
+	font-size: 14px;
+	color: var(--white-color, #ffffff);
+	letter-spacing: 1px;
+	line-height: 15px;
+	border: 2px solid var(--white-color, #ffffff);
+	border-radius: 40px;
+	background: transparent;
+	text-transform: uppercase;
+	transition: all 0.3s ease 0s;
+}
+
+#visit-btn {
+	font-size: 14px;
+	color: var(--white-color, #ffffff);
+	letter-spacing: 1px;
+	line-height: 15px;
+	border: 2px solid var(--yellow-color, #FFBC6B);
+	border-radius: 40px;
+	background: var(--yellow-color, #FFBC6B);
+	text-transform: uppercase;
+	transition: all 0.3s ease 0s;
+}
