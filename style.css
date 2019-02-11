@@ -1,6 +1,7 @@
 :root {
 	--main-font-color: #ffffff;
 	--secondary-font-color: #FFBC6B;
+	--black-font-color: #000000;
 }
 body, html {
 	font-family: 'Playfair Display', serif !important;
@@ -48,7 +49,7 @@ body, html {
 h2, h3, h4, h5, h6 {
 	font-family: 'Playfair Display', serif !important;
 	/* font-style: italic !important; */
-	color: var(--main-font-color, #ffffff) !important;
+	color: var(--black-font-color, #000000) !important;
 }
 
 blockquote .corinthians-quote {
@@ -123,11 +124,8 @@ a {
 }
 
 p {
-	color: var(--main-font-color, #ffffff);
+	color: #000000;
 }
- main {
-	/* background: rgb(248, 249, 250); */
- }
 
  .square-welcome {
 	display: inline-block;
@@ -210,10 +208,11 @@ p {
 #welcome-container {
 	padding-top: 5rem;
 	padding-bottom: 7rem;
+	background: #2A263D;
 }
 
 #welcome-container p, #welcome-container h2 {
-	color: #000000 !important;
+	color: var(--main-font-color, #ffffff) !important;
 }
 
 #explore-container {
@@ -232,7 +231,19 @@ p {
 }
 
 #visit-container {
-	/* background: #99CCCC; */
+	background: #2A263D;
+}
+
+#visit-container h3, #visit-container a {
+	color: var(--main-font-color, #ffffff) !important;
+}
+#visit-description p {
+	color: var(--main-font-color, #ffffff) !important;
+}
+
+#address-container ul {
+	list-style: none;
+	color: var(--main-font-color, #ffffff) !important;
 }
 
 #services-and-visit-container {
