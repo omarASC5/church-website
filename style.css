@@ -327,7 +327,13 @@ p {
 	list-style-type: none;
 }
 
+#footer-logo {
+	width: 90px;
+}
 
+#footer-bottom-container {
+	background: #201C2F;
+}
 
 .list-footer a {
 	color: rgba(255, 255, 255, 0.5);
