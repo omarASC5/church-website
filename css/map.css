@@ -1,0 +1,8 @@
+#map {
+	height: 400px;
+	width: 100%;
+}
+  
+.infoWindow-style {
+	font-size: 0.83rem !important;
+}

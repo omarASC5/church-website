@@ -18,3 +18,8 @@
 #main-navbar .active > .nav-link {
 	color: var(--yellow-color, #FFBC6B);
 }
+
+.navbar-brand img {
+	height: 80px; 
+	width: 80px;
+}
