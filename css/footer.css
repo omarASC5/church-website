@@ -5,35 +5,36 @@
 	--purple-color: #2A263D;
 	--dark-purple-color: #201C2F;
 	--default-font-size: 24px;
-}
-
-.list-footer-title {
+  }
+  
+  .list-footer-title {
 	color: var(--main-font-color, #ffffff) !important;
-}
-
-.list-footer {
+  }
+  
+  .list-footer {
 	list-style-type: none;
-}
-
-#footer-logo {
+  }
+  
+  #footer-logo {
 	width: 90px;
-}
-
-#footer-bottom-container {
+  }
+  
+  #footer-bottom-container {
 	background: var(--dark-purple-color, #201C2F);
-}
-
-.list-footer a {
+  }
+  
+  .list-footer a {
 	color: rgba(255, 255, 255, 0.5);
-}
-.list-footer a:hover {
+  }
+  
+  .list-footer a:hover {
 	color: var(--main-font-color, #ffffff) !important;
-}
-
-#footer-bottom {
+  }
+  
+  #footer-bottom {
 	background: var(--purple-color, #2A263D);
-}
-
-#footer-bottom p {
+  }
+  
+  #footer-bottom p {
 	color: var(--main-font-color, #ffffff) !important;
-} 
+  }
