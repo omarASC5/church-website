@@ -1,0 +1,25 @@
+:root {
+	--white-color: #ffffff;
+	--yellow-color: #FFBC6B;
+	--black-color: #000000;
+	--purple-color: #2A263D;
+	--dark-purple-color: #201C2F;
+	--default-font-size: 24px;
+  }
+
+.main-header span {
+	color: var(--yellow-color, #FFBC6B);
+  }
+
+  .tinted-image {
+	background:
+	  linear-gradient(rgba(42, 38, 61, 0.70),
+	  rgba(42, 38, 61, 0.70)),
+	  url("../images/clouds-cloudy-conifers-247478.jpg");
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	-o-background-size: cover;
+	background-position: top;
+	min-height: 90vmin;
+  }
