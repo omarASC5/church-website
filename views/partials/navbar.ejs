@@ -1,5 +1,5 @@
 <nav id="main-navbar" class="navbar container navbar-expand-sm navbar-dark">
-		<a class="navbar-brand py-0 mr-0" href="../index.html"><img src="/images/church_logo_cropped.gif"></a>
+		<a class="navbar-brand py-0 mr-0" href="/"><img src="/images/church_logo_cropped.gif"></a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 		  <span class="navbar-toggler-icon"></span>
 		</button>
@@ -8,38 +8,38 @@
 			<li class="nav-item">
 			  <a class="nav-link" href="#"></a>
 			</li>
-			<li class="nav-item">
-			  <a class="nav-link" href="html/about.html">About</a>
+			<li <% if (page_name === 'about') { %>class="active nav-item" <% } %> >
+			  <a class="nav-link" href="/about">About</a>
 			</li>
 
-			<li class="nav-item">
-			  <a class="nav-link" href="#">Our Creed</a>
+			<li <% if (page_name === 'our-creed') { %>class="active nav-item" <% } %> >
+			  <a class="nav-link" href="/our-creed">Our Creed</a>
 			</li>
 
-			<li class="nav-item active">
-			  <a class="nav-link" href="#">Services<span class="sr-only">(current)</span></a>
+			<li <% if (page_name === 'our-services') { %>class="active nav-item" <% } %> >
+			  <a class="nav-link" href="/our-services">Services<span class="sr-only">(current)</span></a>
 			</li>
 
-			<li class="nav-item">
-			  <a class="nav-link" href="#">Visit</a>
+			<li <% if (page_name === 'visit') { %>class="active nav-item" <% } %> >
+			  <a class="nav-link" href="/visit">Visit</a>
 			</li>
 
-			<li class="nav-item">
-			  <a class="nav-link" href="#">Prayer Request</a>
+			<li <% if (page_name === 'prayer-request') { %>class="active nav-item" <% } %> >
+			  <a class="nav-link" href="/prayer-request">Prayer Request</a>
 			</li>
 
-			<li class="nav-item">
-			  <a class="nav-link" href="#">Gallery</a>
+			<li <% if (page_name === 'gallery') { %>class="active nav-item" <% } %> >
+			  <a class="nav-link" href="/gallery">Gallery</a>
 			</li>
 
-			<li class="nav-item dropdown">
+			<li class="dropdown<% if (page_name === 'pastor-login') { %> class='' active nav-item' <% } %>" >
 			  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				More
 			  </a>
 			  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-				<a class="dropdown-item" href="#" style="color: #000000;">Pastor Login</a>
+				<a class="dropdown-item" href="/pastor-login" style="color: #000000;">Pastor Login</a>
 			  </div>
 			</li>
 		  </ul>
 		</div>
-	  </nav>
+</nav>
