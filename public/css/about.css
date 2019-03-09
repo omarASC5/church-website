@@ -1,0 +1,30 @@
+.outline-btn {
+	font-size: 14px;
+	color: var(--white-color, #ffffff);
+	letter-spacing: 1px;
+	line-height: 15px;
+	border: 2px solid var(--white-color, #ffffff);
+	border-radius: 40px;
+	background: transparent;
+	text-transform: uppercase;
+	transition: all 0.3s ease 0s;
+  }
+
+ 
+  
+  .yellow-btn {
+	font-size: 14px;
+	color: var(--white-color, #ffffff);
+	letter-spacing: 1px;
+	line-height: 15px;
+	border: 2px solid var(--yellow-color, #FFBC6B);
+	border-radius: 40px;
+	background: var(--yellow-color, #FFBC6B);
+	text-transform: uppercase;
+	transition: all 0.3s ease 0s;
+  }
+
+img {
+	height: 350px;
+	width: 350px;
+}
