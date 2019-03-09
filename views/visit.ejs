@@ -3,6 +3,8 @@
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/navbar.css">
 	<link rel="stylesheet" href="css/page-header-css/main.css">
+	<link rel="stylesheet" href="css/visit.css">
+	<link rel="stylesheet" href="css/map.css">
 	<link rel="stylesheet" href="css/footer.css">
 </head>
 
@@ -17,6 +19,37 @@
 	</div>
 </article>
 
+<div class="container py-5">
+	<h2 class="text-center pb-4">Getting to know each other</h2>
+		<p>
+			We know meeting someone new for the first time can be intimidating, 
+			and going to a new church can be nerve-wracking. We want to help make 
+			your first experience at Hermanos Unidos En Cristo Sanando Los Heridos 
+			a great one!
+		</p>
+		<h3 class="text-center pb-4">SERVICE TIMES</h3>
+		<p class="text-center">Hermanos Unidos Sanando Los Heridos meets throughout the week, 
+			servicing the needs of everyone in our community!
+		</p>
+		<ul class="dashed text-center">
+			<li>Main Service: Sundays 4pm-5pm</li>
+			<li>Culto de Niños: Tuesdays 2pm-6pm</li>
+			<li>Culto de Jóvenes: Mondays 11am</li>
+		</ul>
+		<h4 class="text-center pb-4">DIRECTIONS</h4>
+		<div class="text-center pb-4">
+			<a href="https://www.google.com/maps/dir//1938+Daly+Ave,+Bronx,+NY+10460/@40.8413878,-73.9539587,12z/data=!3m1!4b1!4m9!4m8!1m0!1m5!1m1!1s0x89c2f48b6f42e6d1:0xfb54855297c00d05!2m2!1d-73.8839184!2d40.8412791!3e0" target="_blank">
+				<button class="btn btn-light btn-lg mx-1 yellow-btn">Get Directions</button>
+			</a>
+		</div>
+		<h5 class="text-center pb-4">CHURCH CULTURE</h5>
+		<p class="text-center">Hermanos Unidos Sanando Los Heridos estamos gozando! Musica todo el 
+			tiempo! Hay un van que nos llevamos! Nos llevamos bien y comemos mucho. 
+		</p>
+		
+	</div>
+	<% include partials/gmaps.ejs %>
+	<div id="map"></div>
 <% include partials/footer.ejs %>
 
 
