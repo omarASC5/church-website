@@ -1,0 +1,21 @@
+.yellow-btn {
+	font-size: 14px;
+	color: var(--white-color, #ffffff);
+	letter-spacing: 1px;
+	line-height: 15px;
+	border: 2px solid var(--yellow-color, #FFBC6B);
+	border-radius: 40px;
+	background: var(--yellow-color, #FFBC6B);
+	text-transform: uppercase;
+	transition: all 0.3s ease 0s;
+	width: 10em;
+	height: 3.5em;
+}
+
+input, textarea {
+	background-color : #d1d1d1e0 !important; 
+}
+
+#form-container {
+	width: 60%;
+}
