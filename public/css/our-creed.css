@@ -1,0 +1,25 @@
+img {
+	height: 611px;
+	width: 728px;
+}
+
+.main-header span {
+	color: var(--yellow-color, #FFBC6B);
+  }
+
+  .belief {
+	  /* text-transform: uppercase; */
+  }
+
+  .belief-description {
+
+  }
+
+  ul {
+	list-style-type:upper-latin;
+  }
+  li {
+	  margin-top: 20px;
+	  margin-bottom: 20px;
+  }
+  
