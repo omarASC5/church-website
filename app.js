@@ -24,7 +24,7 @@ let dev_db_url = "mongodb://ocobas:sanandolosheridos1@ds039175.mlab.com:39175/ch
 let mongoDB = process.env.MONGODB_URI || dev_db_url;
 mongoose.connect(mongoDB,{useNewUrlParser: true});
 mongoose.Promise = global.Promise;
-let db = mongoose.connection;
+let db = mongoose.connection
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 app.use(bodyParser.json());
