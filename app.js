@@ -129,7 +129,7 @@ app.get("/events", (req, res, next) => {
 
 
 
-app.listen(process.env.PORT || 3000, () => {
+app.listen(process.env.PORT || 80, () => {
 	console.log(`Server running on port ${keys.PORT}!`);
 });
 
