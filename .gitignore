@@ -1,5 +1,5 @@
 # Ignore keys.js file
-config/keys.js
+# config/keys.js
 
 # Ignore node_modules
 node_modules
