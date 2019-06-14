@@ -8,10 +8,10 @@
 </head>
 
 <!-- This article container is the header for each file -->
-<article class="jumbotron d-flex flex-wrap tinted-image py-0 mb-0">
+<article class="jumbotron d-flex flex-wrap justify-content-center tinted-image py-0 mb-0">
 	<% include partials/navbar.ejs %>
 	<div class="container-fluid align-self-center pb-5">
-		<h1 class="text-center main-header">Edit <span>Event</span></h1>
+		<h1 class="text-center main-header">Editar <span>Evento</span></h1>
 	</div>
 	<div class="d-flex justify-content-center align-items-end pb-2 w-100">
 		<i class="far fa-arrow-alt-circle-down" style="font-size: 3rem; color: #fff;"></i>
@@ -20,23 +20,23 @@
 
 <div class="d-flex justify-content-center">
 	<div class="container pt-4 pb-5" id="form-container">
-		<form method="POST"  action="/events/<%=event._id%>?_method=PUT">
+		<form method="POST"  action="/eventos/<%=event._id%>?_method=PUT">
 			<div class="form-group">
-				<label for="exampleInputEmail1">Event Name</label>
-				<input type="text" value="<%=event.name%>" name="name" class="form-control" id="exampleInputEmail1" aria-describedby="eventNameHelp" placeholder="Enter event name">
-				<small id="nameHelp" class="form-text text-muted">Choose a name that describes the event accurately.</small>
+				<label for="exampleInputEmail1">Nombre del Evento</label>
+				<input type="text" value="<%=event.name%>" name="name" class="form-control" id="exampleInputEmail1" aria-describedby="eventNameHelp" placeholder="Escriba el nombre del evento">
+				<small id="nameHelp" class="form-text text-muted">Elija un nombre que describa el evento con precisión.</small>
 			</div>
 			<div class="form-group">
 				<label for="exampleFormControlTextarea1">Event Image</label>
-				<input type="text" value="<%=event.image%>" class="form-control" name="image" id="exampleFormControlTextarea1" placeholder="An image from the event...">
-				<small id="imageHelp" class="form-text text-muted">Add a link to an image about the event.</small>
+				<input type="text" value="<%=event.image%>" class="form-control" name="image" id="exampleFormControlTextarea1" placeholder="Una imagen del evento...">
+				<small id="imageHelp" class="form-text text-muted">Agregue un vínculo a una imagen sobre el evento.</small>
 			</div>
 			<div class="form-group">
 				<label for="exampleInputEmail1">Event Description</label>
-				<textarea rows="6" name="description" class="form-control" id="exampleInputEmail2"  placeholder="Enter a decription of the event"><%=event.description%></textarea>
-				<small id="descriptionHelp" class="form-text text-muted">Write a short blurb describing the event.</small>
+				<textarea rows="6" name="description" class="form-control" id="exampleInputEmail2"  placeholder="Entre en una descripción del evento"><%=event.description%></textarea>
+				<small id="descriptionHelp" class="form-text text-muted">Escribe un breve desenfoque describiendo el evento.</small>
 			</div>
-			<button type="submit" class="btn btn-primary yellow-btn">Add Event</button>
+			<button type="submit" class="btn btn-primary yellow-btn">Editar Evento</button>
 		</form>
 	</div>
 </div>

@@ -1,46 +1,43 @@
-<nav id="main-navbar" class="navbar container navbar-expand-sm navbar-dark">
-		<a class="navbar-brand py-0 mr-0" href="/"><img src="/images/church_logo_cropped.gif"></a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-		  <span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarNavDropdown">
-		  <ul class="navbar-nav ml-auto">
-			<li class="nav-item">
-			  <a class="nav-link" href="#"></a>
-			</li>
-			<li <% if (page_name === 'about') { %>class="active nav-item" <% } %> >
-			  <a class="nav-link" href="/about">About</a>
-			</li>
-
-			<li <% if (page_name === 'our-creed') { %>class="active nav-item" <% } %> >
-			  <a class="nav-link" href="/our-creed">Our Creed</a>
-			</li>
-
-			<li <% if (page_name === 'our-services') { %>class="active nav-item" <% } %> >
-			  <a class="nav-link" href="/our-services">Services<span class="sr-only">(current)</span></a>
-			</li>
-
-			<li <% if (page_name === 'visit') { %>class="active nav-item" <% } %> >
-			  <a class="nav-link" href="/visit">Visit</a>
-			</li>
-
-			<li <% if (page_name === 'prayer-request') { %>class="active nav-item" <% } %> >
-			  <a class="nav-link" href="/prayer-request">Prayer Request</a>
-			</li>
-
-			<li <% if (page_name === 'events') { %>class="active nav-item" <% } %> >
-			  <a class="nav-link" href="/events">Events</a>
-			</li>
-		
-
-			<li class="dropdown<% if (page_name === 'pastor-login') { %> class='' active nav-item' <% } %>" >
-			  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				More
-			  </a>
-			  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-				<a class="dropdown-item" href="/pastor-login" style="color: #000000;">Pastor Login</a>
-			  </div>
-			</li>
-		  </ul>
-		</div>
-</nav>
+	<nav id="main-navbar" class="navbar navbar-expand-md navbar-dark py-md-5 d-flex align-items-center">
+			<a class="navbar-brand mt-md-0" href="/"><img src="/images/church_logo_cropped.gif"></a>
+			<button class="navbar-toggler mt-4 mt-md-0" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNavDropdown">
+				<ul class="navbar-nav ml-auto nav-fill">
+				<li <% if (page_name === 'about') { %>class="active nav-item" <% } %> >
+					<a class="nav-link py-0 py-md-4" href="/quienes-somos">¿Quiénes Somos?</a>
+				</li>
+	
+				<li <% if (page_name === 'our-creed') { %>class="active nav-item" <% } %> >
+					<a class="nav-link py-0 py-md-4" href="/nuestro-credo">Nuestro Credo</a>
+				</li>
+	
+				<li <% if (page_name === 'our-services') { %>class="active nav-item" <% } %> >
+					<a class="nav-link py-0 py-md-4" href="/servicios">Servicios<span class="sr-only">(current)</span></a>
+				</li>
+	
+				<li <% if (page_name === 'visit') { %>class="active nav-item" <% } %> >
+					<a class="nav-link py-0 py-md-4" href="/visitanos">Visitanos</a>
+				</li>
+	
+				<li <% if (page_name === 'prayer-request') { %>class="active nav-item" <% } %> >
+					<a class="nav-link py-0 py-md-4" href="/peticion-de-oracion">Petición de Oración</a>
+				</li>
+	
+				<li <% if (page_name === 'events') { %>class="active nav-item" <% } %> >
+					<a class="nav-link py-0 py-md-4" href="/eventos">Eventos</a>
+				</li>
+			
+	
+				<li class="dropdown<% if (page_name === 'pastor-login') { %> class='' active nav-item' <% } %>" >
+					<a class="nav-link py-0 py-md-4 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Más
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+					<a class="dropdown-item" href="/pastor-login" style="color: #000000;">Pastor Login</a>
+					</div>
+				</li>
+				</ul>
+			</div>
+	</nav>

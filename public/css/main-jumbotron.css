@@ -4,26 +4,24 @@
 	--black-color: #000000;
 	--purple-color: #2A263D;
 	--dark-purple-color: #201C2F;
-	--default-font-size: 24px;
+	--default-font-size: 16px;
   }
   
   .main-header {
 	color: var(--white-color, #ffffff);
-	font-size: 83px !important;
+	font-size: 30px !important;
   }
   
-  .main-header span {
+  .sanando-los-heridos-sub-header h1 {
 	color: var(--yellow-color, #FFBC6B);
+	font-size: 30px !important;
+
   }
   
-  blockquote .corinthians-quote {
-	color: var(--white-color, #ffffff);
-	font-size: 18px;
-  }
-  
-  blockquote span {
-	font-size: 18px;
-  }
+  blockquote .corinthians-quote, blockquote span {
+		display: none;
+	}
+
   
   .tinted-image {
 	background:
@@ -35,7 +33,7 @@
 	background-size: cover;
 	-o-background-size: cover;
 	background-position: top;
-	min-height: 100vmin;
+	min-height: 85vmax;
   }
   
   #about-btn {
@@ -60,4 +58,87 @@
 	background: var(--yellow-color, #FFBC6B);
 	text-transform: uppercase;
 	transition: all 0.3s ease 0s;
-  }
+	}
+	
+	@media (min-width: 576px) { 
+		.main-header {
+			color: var(--white-color, #ffffff);
+			font-size: 2rem !important;
+			}
+			
+			.sanando-los-heridos-sub-header h1 {
+			color: var(--yellow-color, #FFBC6B);
+			font-size: 2rem !important;
+		
+			}
+			.tinted-image {
+				min-height: 80vmin;
+
+			}
+			
+	 }
+
+	@media (min-width: 768px) {
+		.main-header {
+			color: var(--white-color, #ffffff);
+			font-size: 2.3rem !important;
+			}
+			
+			.sanando-los-heridos-sub-header h1 {
+			color: var(--yellow-color, #FFBC6B);
+			font-size: 2.3rem !important;
+		
+			}
+
+			.tinted-image {
+				min-height: 85vmin;
+
+			}
+	}
+	
+	@media (min-width: 992px) {
+		.main-header {
+			color: var(--white-color, #ffffff);
+			font-size: 3rem !important;
+			}
+			
+			.sanando-los-heridos-sub-header h1 {
+			color: var(--yellow-color, #FFBC6B);
+			font-size: 3rem !important;
+		
+			}
+
+			.tinted-image {
+				min-height: 80vmin;
+
+			}
+	}
+	
+	@media (min-width: 1200px) {
+		.main-header {
+			color: var(--white-color, #ffffff);
+			font-size: 3.3rem !important;
+			}
+			
+			.sanando-los-heridos-sub-header h1 {
+			color: var(--yellow-color, #FFBC6B);
+			font-size: 3.3rem !important;
+		
+			}
+
+			blockquote .corinthians-quote {
+				display: block;
+				color: var(--white-color, #ffffff);
+				font-size: 1.125rem;
+				}
+				
+				blockquote span {
+					display: block;
+				font-size: 1.125rem;
+				}
+
+				.tinted-image {
+					min-height: 80vmin;
+	
+				}
+	}

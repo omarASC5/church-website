@@ -18,8 +18,10 @@ img {
   ul {
 	list-style-type:upper-latin;
   }
-  li {
-	  margin-top: 20px;
-	  margin-bottom: 20px;
+ 
+
+  li-styles {
+    margin-top: 20px;
+	  margin-bottom: 20px; 
   }
   

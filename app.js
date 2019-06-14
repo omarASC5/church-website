@@ -5,9 +5,51 @@ const express = require("express"),
 	  bodyParser = require("body-parser"),
 	  mongoose       = require("mongoose"),
 	  nodemailer = require("nodemailer"),
-	methodOverride = require('method-override');
+	methodOverride = require('method-override'),
+	passport = require("passport"),
+ User = require('./models/user.model');
+
+ app.use(passport.initialize());
+ app.use(passport.session()); 
+ 
+ // Implement (de)serializeUser methods -- Do I need this?
+ passport.serializeUser((user, done) => done(null, user));
+ passport.deserializeUser((user, done) => done(null, user));
+	var GoogleStrategy = require( 'passport-google-oauth2' ).Strategy;
+	passport.use(new GoogleStrategy({
+			clientID: "88904186757-ghn498iddjotnk1jh5pkjtu9ftc41m0g.apps.googleusercontent.com",
+			clientSecret: "1r6v4WtrewyPmoilIz8-QtYM",
+			callbackURL: "http://localhost:5500/auth/google/callback",
+			passReqToCallback: true
+		},
+		(request, accessToken, refreshToken, profile, done) => {
+			User.findOrCreate({ googleId: profile.id }, function (err, user) {
+				return done(err, user);
+			});
+		}
+	));
+
+	// GET /auth/google
+//   Use passport.authenticate() as route middleware to authenticate the
+//   request.  The first step in Google authentication will involve
+//   redirecting the user to google.com.  After authorization, Google
+//   will redirect the user back to this application at /auth/google/callback
+app.get('/auth/google',
+passport.authenticate('google', { scope: ['https://www.googleapis.com/auth/plus.login'] }));
+
+// GET /auth/google/callback
+//   Use passport.authenticate() as route middleware to authenticate the
+//   request.  If authentication fails, the user will be redirected back to the
+//   login page.  Otherwise, the primary route function function will be called,
+//   which, in this example, will redirect the user to the home page.
+app.get('/auth/google/callback', 
+passport.authenticate('google', { failureRedirect: '/pastor-login' }),
+(req, res) => {
+	res.redirect('/');
+});
 
 
+	
 // override with the X-HTTP-Method-Override header in the request
 app.use(methodOverride('X-HTTP-Method-Override'))
 app.use(methodOverride('_method'))
@@ -29,32 +71,49 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
-app.use('/events', event);
+
+function isAuthenticated(req, res, next) {
+
+			// passport.authenticate('google', { failureRedirect: '/pastor-login', scope: 'profile' })
+			console.log(req.user);
+			next();
+		
+
+
+	
+}
+// passport.authenticate('google', { failureRedirect: '/login', scope: 'profile' })
+// 'email https://www.googleapis.com/auth/drive'
+app.use('/eventos',
+isAuthenticated, (req,res,next)=> {
+	console.log('YOOOO');
+	next()
+}, event);
 app.get("/", (req, res, next) => {
 	res.render("index", {page_name: "index"});
 	});
 	
-app.get("/about", (req, res, next) => {
+app.get("/quienes-somos", (req, res, next) => {
 	res.render("about", {page_name: "about"});
 });
 
-app.get("/our-creed", (req, res, next) => {
+app.get("/nuestro-credo", (req, res, next) => {
 	res.render("our-creed", {page_name: "our-creed"});
 });
 
-app.get("/our-services", (req, res, next) => {
+app.get("/servicios", (req, res, next) => {
 	res.render("our-services", {page_name: "our-services"});
 });
 
-app.get("/visit", (req, res, next) => {
+app.get("/visitanos", (req, res, next) => {
 	res.render("visit", {page_name: "visit"});
 });
 
-app.get("/prayer-request", (req, res, next) => {
+app.get("/peticion-de-oracion", (req, res, next) => {
 	res.render("prayer-request", {page_name: "prayer-request"});
 });
 
-app.post("/prayer-request", (req, res, next) => {
+app.post("/peticion-de-oracion", (req, res, next) => {
 	const output = `
 		<p>You have a new contact request</p>
 		<h3>Contact Details</h3>
@@ -71,48 +130,38 @@ app.post("/prayer-request", (req, res, next) => {
 		Prayer Request:
 		${req.body.prayerRequest}
 	`
-	// async..await is not allowed in global scope, must use a wrapper
-async function main(){
 
-	// Generate test SMTP service account from ethereal.email
-	// Only needed if you don't have a real mail account for testing
-	let account = await nodemailer.createTestAccount();
-  
 	// create reusable transporter object using the default SMTP transport
 	let transporter = nodemailer.createTransport({
-	  host: "smtp.ethereal.email",
-	  port: 587,
-	  secure: false, // true for 465, false for other ports
-	  auth: {
-		user: account.user, // generated ethereal user
-		pass: account.pass // generated ethereal password
-	  },
-	  tls: {
-		  rejectUnauthorized: false
-	  }
-	});
+		service: 'gmail',
+		auth: {
+					 user: 'omarlcobas@gmail.com',
+					 pass: 'Letsgoomar123'
+			 }
+	 });
+
   
 	// setup email data with unicode symbols
 	let mailOptions = {
-	  from: '"Fred Foo 👻" <foo@example.com>', // sender address
+	  from: req.body.email, // sender address
 	  to: "ocobas19@avenues.org, omarlcobas@gmail.com", // list of receivers
 	  subject: "Prayer Request - Sanando Los Heridos", // Subject line
 	  text: outputPlainText, // plain text body
 	  html: output // html body
 	};
-  
-	// send mail with defined transport object
-	let info = await transporter.sendMail(mailOptions)
-  
-	console.log("Message sent: %s", info.messageId);
-	// Preview only available when sending through an Ethereal account
-	console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
-  
-	// Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
-	// Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
-  }
-  
-  main().catch(console.error);
+
+	transporter.sendMail(mailOptions, function (err, info) {
+		if(err) {
+			console.log(err)
+			// Custom Error Page
+			res.redirect('/peticion-de-oracion');
+		}
+		else {
+			console.log(info);
+			// Custom Thank you page
+			res.redirect('/peticion-de-oracion');
+		}
+ 	});
 });
 
 app.get("/pastor-login", (req, res, next) => {
@@ -120,7 +169,7 @@ app.get("/pastor-login", (req, res, next) => {
 });
 
 // index route
-app.get("/events", (req, res, next) => {
+app.get("/eventos", isAuthenticated, (req, res, next) => {
 	res.render("events", {page_name: "events"});
 });
 

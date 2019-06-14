@@ -18,8 +18,46 @@
   #main-navbar .active>.nav-link {
 	color: var(--yellow-color, #FFBC6B);
   }
-  
-  .navbar-brand img {
-	height: 80px;
-	width: 80px;
-  }
+	
+	.navbar-brand img {
+		height: 2em;
+		width: 2em;
+		
+		}
+
+		.navbar-brand {
+			margin-top: 1.15rem !important;
+		}
+ 
+	
+	
+	@media (min-width: 576px) { 
+		.navbar-brand img {
+			height: 2.25em;
+			width: 2.25em;
+			}
+	 }
+
+	@media (min-width: 768px) {
+		.navbar-brand img {
+			height: 2.5em;
+			width: 2.5em;
+			}
+	}
+	
+	@media (min-width: 992px) {
+		.navbar-brand img {
+			height: 3em;
+			width: 3em;
+			}
+	}
+	
+	@media (min-width: 1200px) {
+		.navbar-brand img {
+			height: 4em;
+			width: 4em;
+		}
+
+		
+	}
+	

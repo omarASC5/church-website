@@ -4,7 +4,7 @@
 	--black-color: #000000;
 	--purple-color: #2A263D;
 	--dark-purple-color: #201C2F;
-	--default-font-size: 24px;
+	--default-font-size: 16px;
   }
   
   body,
@@ -14,6 +14,8 @@
 	color: var(--black-color, #000000) !important;
 	width: 100vw;
 	height: 100%;
+	overflow-x: hidden;
+	scroll-behavior: smooth;
   }
   
   h2,
@@ -24,7 +26,29 @@
 	font-family: 'Playfair Display', serif !important;
 	color: var(--black-color, #000000) !important;
   }
-  
-  a {
-	font-size: 0.90rem;
-  }
+
+	
+	@media (min-width: 576px) { 
+		:root {
+			--default-font-size: 1.05rem !important;
+		}
+	 }
+
+	@media (min-width: 768px) {
+		:root {
+			--default-font-size: 1.125rem !important;
+		}
+	}
+	
+	@media (min-width: 992px) {
+		:root {
+			--default-font-size: 1.15rem !important;
+		}
+	}
+	
+	@media (min-width: 1200px) {
+		:root {
+			--default-font-size: 1.25rem !important;
+		}
+	}
+	

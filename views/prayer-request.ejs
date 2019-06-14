@@ -8,10 +8,10 @@
 </head>
 
 <!-- This article container is the header for each file -->
-<article class="jumbotron d-flex flex-wrap tinted-image py-0 mb-0">
+<article class="jumbotron d-flex flex-wrap justify-content-center tinted-image py-0 mb-0">
 	<% include partials/navbar.ejs %>
 	<div class="container-fluid align-self-center pb-5">
-		<h1 class="text-center main-header">Prayer <span>Request</span></h1>
+		<h1 class="text-center main-header">Petición de <span>Oración</span></h1>
 	</div>
 	<div class="d-flex justify-content-center align-items-end pb-2 w-100">
 		<i class="far fa-arrow-alt-circle-down" style="font-size: 3rem; color: #fff;"></i>
@@ -19,30 +19,31 @@
 </article>
 
 <div class="container text-center pt-5">
-	<h2 class="text-center">Prayer changes everything</h2>
-	<p>Hermanos Unidos En Cristo Sanando Los Heridos believes in the power of prayer!</p>
-	<p>NOTE: Any prayer request you share with Hermanos Unidos En Cristo Sanando 
-		Los Heridos will remain confidential and will only be shared with our team 
-		lead for the purposes of prayer.
+	<h2 class="text-center">La oración cambia todo</h2>
+	<p>Hermanos Unidos En Cristo Sanando Los Heridos cree en el poder de la oración!</p>
+	<p>
+		NOTA: cualquier solicitud de oración que compartas con hermanos Unidos en 
+		Cristo sanando los heridos permanecerá confidencial y solo será compartida 
+		con nuestro líder de equipo para los propósitos de la oración.
 	</p>
 </div>
 <div class="d-flex justify-content-center">
 	<div class="container pt-4 pb-5" id="form-container">
 		<form method="POST" action="prayer-request">
 			<div class="form-group">
-				<label for="exampleInputEmail1">Email address</label>
-				<input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-				<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+				<label for="exampleInputEmail1">Correo Electrónico</label>
+				<input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingrese su dirección de correo electrónico">
+				<small id="emailHelp" class="form-text text-muted">Nunca compartiremos tu correo con nadie más.</small>
 			</div>
 			<div class="form-group">
-				<label for="exampleInputEmail1">Name</label>
-				<input type="text" name="name" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" placeholder="Enter name">
+				<label for="exampleInputEmail1">Nombre</label>
+				<input type="text" name="name" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" placeholder="Ingrese su nombre">
 			</div>
 			<div class="form-group">
-				<label for="exampleFormControlTextarea1">Prayer Request</label>
-				<textarea class="form-control" name="prayerRequest" id="exampleFormControlTextarea1" rows="6" placeholder="Prayer Request"></textarea>
+				<label for="exampleFormControlTextarea1">Petición de Oración</label>
+				<textarea class="form-control" name="prayerRequest" id="exampleFormControlTextarea1" rows="6" placeholder="Petición de Oración"></textarea>
 			</div>
-			<button type="submit" class="btn btn-primary yellow-btn">Submit</button>
+			<button type="submit" class="btn btn-primary yellow-btn">Enviar</button>
 		</form>
 	</div>
 </div>

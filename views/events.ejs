@@ -8,10 +8,10 @@
 </head>
 
 <!-- This article container is the header for each file -->
-<article class="jumbotron d-flex flex-wrap tinted-image py-0 mb-0">
+<article class="jumbotron d-flex flex-wrap justify-content-center tinted-image py-0 mb-0">
 	<% include partials/navbar.ejs %>
 	<div class="container-fluid align-self-center pb-5">
-		<h1 class="text-center main-header">Events</h1>
+		<h1 class="text-center main-header">Eventos</h1>
 	</div>
 	<div class="d-flex justify-content-center align-items-end pb-2 w-100">
 		<i class="far fa-arrow-alt-circle-down" style="font-size: 3rem; color: #fff;"></i>
@@ -20,9 +20,14 @@
 
 <div class="container">
 	<div class="pt-3 text-center">
-		<a href="/events/form">
-			<button class="btn btn-light btn-lg mx-1 yellow-btn">Add Event</button>
-		</a>
+		<!-- <% console.log(users) %> -->
+		<% if (pastorLoggedIn) { %>
+			<a href="/eventos/form">
+				<button class="btn btn-light btn-lg mx-1 yellow-btn">Agregar evento</button>
+			</a>
+		<% } else { %>
+			<p>NAHHH</p>
+			<% } %>
 	</div>
 	<% events.forEach((event) => { %>
 	<div class="row py-5">
@@ -30,13 +35,17 @@
 			<img src="<%=event.image%>" alt="nuestro credo image" class="img-thumbnail img-fluid">
 		</div>
 		<div class="col-9 d-inline">
-				<p>EVENT NAME: <%=event.name%></p>
-				<p>EVENT DESCRIPTION: <%=event.description%></p>
+				<p><strong><em>Nombre del Evento:</em></strong> <%=event.name%></p>
+				<p><strong><em>Descripción del Evento:</em></strong> <%=event.description%></p>
 				
 				<div class="text-center d-flex justify-content-center">
-					<a class="btn btn-light btn-lg mx-1 outline-btn" href="/events/<%=event._id%>/edit">Edit</a>
-      				<form id="delete" action="/events/<%=event._id%>/delete?_method=DELETE" method="POST">
-        				<button class="btn btn-light btn-lg mx-1 yellow-btn">Delete</button>
+						<% if (pastorLoggedIn) { %>
+							<a class="btn btn-light btn-lg mx-1 outline-btn" href="/eventos/<%=event._id%>/edit">Corregir</a>
+						<% } %>
+      				<form id="delete" action="/eventos/<%=event._id%>/delete?_method=DELETE" method="POST">
+								<% if (pastorLoggedIn) { %>
+									<button class="btn btn-light btn-lg mx-1 yellow-btn">Borrar</button>
+								<% } %>				
       				</form>
 				</div>
 			</div>

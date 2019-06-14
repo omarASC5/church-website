@@ -4,11 +4,13 @@
 	--black-color: #000000;
 	--purple-color: #2A263D;
 	--dark-purple-color: #201C2F;
-	--default-font-size: 24px;
+	--default-font-size: 16px;
   }
   
   .list-footer-title {
-	color: var(--main-font-color, #ffffff) !important;
+    color: var(--main-font-color, #ffffff) !important;
+    font-size: 1.1em;
+    font-weight: bold;
   }
   
   .list-footer {
@@ -16,7 +18,7 @@
   }
   
   #footer-logo {
-	width: 90px;
+	width: 4em;
   }
   
   #footer-bottom-container {
@@ -26,11 +28,16 @@
   .list-footer a {
 	color: rgba(255, 255, 255, 0.5);
   }
+
+  .services-styles {
+    font-size: 1.05em;
+    color: #8084ae;
+  }
   
   .list-footer a:hover {
 	color: var(--main-font-color, #ffffff) !important;
   }
-  
+
   #footer-bottom {
 	background: var(--purple-color, #2A263D);
   }
@@ -38,3 +45,5 @@
   #footer-bottom p {
 	color: var(--main-font-color, #ffffff) !important;
   }
+
+ 
