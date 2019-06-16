@@ -182,12 +182,15 @@ app.get("/eventos", isAuthenticated, (req, res, next) => {
 
 
 
-app.listen(process.env.PORT || keys.PORT, () => {
-	console.log(`Server running on port ${keys.PORT}!`);
-});
+// app.listen(process.env.PORT || keys.PORT, () => {
+// 	console.log(`Server running on port ${keys.PORT}!`);
+// });
 
 
 // we will pass our 'app' to 'https' server
-https.createServer(app).listen(3000);
-
-
+https.createServer({
+	key: fs.readFileSync('./key.pem'),
+	cert: fs.readFileSync('./cert.pem'),
+	passphrase: 'Dictionary1!'
+}, app)
+.listen(process.env.PORT || keys.PORT);
