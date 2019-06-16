@@ -37,7 +37,8 @@ exports.event_create = function (req, res) {
         {
             name: req.body.name,
 			description: req.body.description,
-			image: req.body.image
+            image: req.body.image,
+            video: req.body.video
         }
     );
 

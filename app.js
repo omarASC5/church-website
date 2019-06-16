@@ -7,10 +7,7 @@ const express = require("express"),
 	  nodemailer = require("nodemailer"),
 	methodOverride = require('method-override'),
 	passport = require("passport"),
- User = require('./models/user.model'),
- https = require('https'),
- fs = require('fs')
- ;
+ User = require('./models/user.model');
 
  app.use(passport.initialize());
  app.use(passport.session()); 
@@ -182,15 +179,9 @@ app.get("/eventos", isAuthenticated, (req, res, next) => {
 
 
 
-// app.listen(process.env.PORT || keys.PORT, () => {
-// 	console.log(`Server running on port ${keys.PORT}!`);
-// });
+app.listen(process.env.PORT || keys.PORT, () => {
+	console.log(`Server running on port ${keys.PORT}!`);
+});
 
 
-// we will pass our 'app' to 'https' server
-https.createServer({
-	key: fs.readFileSync('./key.pem'),
-	cert: fs.readFileSync('./cert.pem'),
-	passphrase: 'Dictionary1!'
-}, app)
-.listen(process.env.PORT || keys.PORT);
+

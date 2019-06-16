@@ -4,7 +4,8 @@ const Schema = mongoose.Schema;
 let eventSchema = new Schema({
 	name: String,
 	description: String,
-	image: String
+	image: String,
+	video: String
 });
 
 
