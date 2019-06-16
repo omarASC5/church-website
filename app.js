@@ -178,7 +178,7 @@ app.get("/eventos", isAuthenticated, (req, res, next) => {
 
 
 
-app.listen(process.env.PORT || keys.PORT, () => {
+app.listen(80, () => {
 	console.log(`Server running on port ${keys.PORT}!`);
 });
 
