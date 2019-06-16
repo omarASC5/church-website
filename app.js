@@ -7,7 +7,10 @@ const express = require("express"),
 	  nodemailer = require("nodemailer"),
 	methodOverride = require('method-override'),
 	passport = require("passport"),
- User = require('./models/user.model');
+ User = require('./models/user.model'),
+ https = require('https'),
+ fs = require('fs')
+ ;
 
  app.use(passport.initialize());
  app.use(passport.session()); 
@@ -71,6 +74,7 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
+
 
 function isAuthenticated(req, res, next) {
 
@@ -182,5 +186,8 @@ app.listen(process.env.PORT || keys.PORT, () => {
 	console.log(`Server running on port ${keys.PORT}!`);
 });
 
+
+// we will pass our 'app' to 'https' server
+https.createServer(app).listen(3000);
 
 
