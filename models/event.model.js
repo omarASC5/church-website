@@ -5,7 +5,8 @@ let eventSchema = new Schema({
 	name: String,
 	description: String,
 	image: String,
-	video: String
+	video: String,
+	youtubeVideo: String
 });
 
 

@@ -31,12 +31,30 @@
 	</div>
 	<% events.forEach((event) => { %>
 	<div class="row py-5">
-		<div class="col-3 d-inline">
-			<img src="<%=event.image%>" alt="nuestro credo image" class="img-thumbnail img-fluid">
-		</div>
 		<div class="col-9 d-inline">
-				<p><strong><em>Nombre del Evento:</em></strong> <%=event.name%></p>
-				<p><strong><em>Descripción del Evento:</em></strong> <%=event.description%></p>
+				
+				<% if (event.image.length === 0) { %>
+					<span style="display: none;"></span>
+					<% } else { %>
+						<img src="<%=event.image%>" alt="nuestro credo image" class="img-thumbnail img-fluid">
+					<% } %>
+				<% if (event.name.length === 0) { %>
+					<span style="display: none;"></span>
+					<% } else { %>
+					<p><strong><em>Nombre del Evento:</em></strong> <%=event.name%></p>
+					<% } %>
+
+				<% if (event.description.length === 0) { %>
+					<span style="display: none;"></span>
+					<% } else { %>
+						<p><strong><em>Descripción del Evento:</em></strong> <%=event.description%></p>
+					<% } %>
+
+
+						<div class="container embed-responsive embed-responsive-16by9 text-center">
+									<iframe width="560" height="315" align="middle" src="<%=event.youtubeVideo%>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</div>
+
 				
 				<div class="text-center d-flex justify-content-center">
 						<% if (pastorLoggedIn) { %>

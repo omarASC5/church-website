@@ -16,7 +16,14 @@ exports.event_index = function (req, res) {
             console.log(events);
             User.find({}, (err, users)=> {
 
-                res.render("events", {page_name: "events", events: events, pastorLoggedIn: true,  users : users, req: req.body.users});
+                res.render("events", 
+                    {
+                        page_name: "events",
+                        events: events,
+                        pastorLoggedIn: true,
+                        users : users,
+                        req: req.body.users
+                    });
             });
         }
       });
@@ -33,12 +40,27 @@ exports.event_form = function (req, res) {
 
 // Create Route
 exports.event_create = function (req, res) {
+    function getId(url) {
+        var regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+        var match = url.match(regExp);
+    
+        if (match && match[2].length == 11) {
+            return match[2];
+        } else {
+            return 'error';
+        }
+    }
+    let video = req.body.video;
+    var videoId = getId(video);
+    console.log(videoId)
     let event = new Event(
         {
             name: req.body.name,
 			description: req.body.description,
             image: req.body.image,
-            video: req.body.video
+            youtubeVideo: `https://www.youtube.com/embed/${videoId}`
+
+            
         }
     );
 
