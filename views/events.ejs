@@ -50,10 +50,9 @@
 						<p><strong><em>Descripción del Evento:</em></strong> <%=event.description%></p>
 					<% } %>
 
-
-						<div class="container embed-responsive embed-responsive-16by9 text-center">
-									<iframe width="560" height="315" align="middle" src="<%=event.youtubeVideo%>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-						</div>
+				<div class="container embed-responsive embed-responsive-16by9">
+							<iframe width="560" height="315" src="<%=event.youtubeVideo%>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
 
 				
 				<div class="text-center d-flex justify-content-center">
