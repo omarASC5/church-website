@@ -136,8 +136,8 @@ app.post("/peticion-de-oracion", (req, res, next) => {
 	let transporter = nodemailer.createTransport({
 		service: 'gmail',
 		auth: {
-					 user: 'omarlcobas@gmail.com',
-					 pass: 'Letsgoomar123'
+					 user: keys.USER,
+					 pass: keys.PASS
 			 }
 	 });
 
